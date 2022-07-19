@@ -1,0 +1,13 @@
+.navclass{
+    background-color:#212664 !important;
+}
+
+.navItemClass{
+    color: white !important;
+    font-family: verdana;
+}
+.navbarBrand{
+    font-size: 30px;
+    color: white !important;
+    font-family: cursive;
+}

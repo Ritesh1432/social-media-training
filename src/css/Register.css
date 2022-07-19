@@ -1,0 +1,31 @@
+label{
+    font-size: 20px;
+    padding: 5px;
+}
+
+input{
+    margin: 5px;
+}
+.registerButton{
+    padding: 10px;
+    font-size: 20px;
+    font-family: verdana;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: inline;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.registerForm{
+    margin-top: 30px;
+}
+.loginLinkButton{
+    padding: 10px;
+    font-size: 20px;
+    font-family: verdana;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: inline;
+    padding-left: 40px;
+    padding-right: 40px;
+}
