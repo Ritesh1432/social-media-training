@@ -10,12 +10,12 @@ function Login() {
       <div className='row '>
         <div className='col-12 col-md-10 offset-md-1  mainLoginComp'>
           <div className='leftImgClass'>
-            <img src={require('./logo.png')} width='500' height='500' />
+            <img src={require('../images/logo.png')} alt="logo" width='500' height='500' />
             <figcaption className='leftImageText'>Post Feed</figcaption>
           </div>
         <div className='loginComp'>
           <div className='loginImgClass'>
-            <img src={require('./test.png')} width='200' height='150'/>
+            <img src={require('../images/test.png')} alt="test" width='200' height='150'/>
           </div>
         <form className='loginForm'>
           <div className='row'>
