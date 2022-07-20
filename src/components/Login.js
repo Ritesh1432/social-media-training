@@ -7,20 +7,32 @@ function Login() {
     <>
     <Header />
     <div className='container'>
-      <div className='loginComp'>
+      <div className='row '>
+        <div className='col-12 col-md-10 offset-md-1  mainLoginComp'>
+          <div className='leftImgClass'>
+            <img src={require('./logo.png')} width='500' height='500' />
+            <figcaption className='leftImageText'>Post Feed</figcaption>
+          </div>
+        <div className='loginComp'>
+          <div className='loginImgClass'>
+            <img src={require('./test.png')} width='200' height='150'/>
+          </div>
         <form className='loginForm'>
           <div className='row'>
-              <label>Username:</label>
+              <label className='text-white'>Username:</label>
               <input type='text' className='form-control' />
           </div>
           <div className='row'>
-              <label>Password:</label>
+              <label className='text-white'>Password:</label>
               <input type='password' className='form-control' />
           </div>
           <button className='btn btn-primary loginButton' >Login</button>
         </form>
       </div>
+        </div>
+      </div>
     </div>
+    
     </>
   )
 }
