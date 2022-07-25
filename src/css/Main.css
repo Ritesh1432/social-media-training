@@ -1,0 +1,25 @@
+.mainContent{
+    overflow-x: hidden;
+}
+
+.addPostText{
+    font-size: 35px;
+    font-family: cursive;
+    justify-content: center;
+}
+.rightSidebar{
+    background-color: aliceblue;
+    height: 100vh;
+}
+.contentBox{
+    height: 100px;
+    margin: 18px;
+    margin-right: 10px;
+}
+.middleSection{
+    padding: 20px;
+    margin-right: 10px;
+}
+.addPostBox{
+    border-bottom: 1px solid black;
+}

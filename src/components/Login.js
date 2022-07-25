@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './Header'
 import '../css/Login.css'
 import { useNavigate } from "react-router-dom";
@@ -15,22 +15,22 @@ function Login() {
     e.preventDefault();
     fetch('http://localhost:3000/users')
     .then(res => res.json())
-    .then(data => setFetchedValue(data))
-    
+    .then(data => setFetchedValue(data))  
   }
 
   const checkCredentials =  (data) => {
-    if(data.uname === uname)
-    if(data.password === password)
+    if(data.uname === uname && data.password === password)
     {
     localStorage.setItem('Username',uname)
-    navigate('/')
     }
   }
-  fetchedValue && fetchedValue.map((data) => (
-    checkCredentials(data)
-  ))
-   
+
+  fetchedValue && fetchedValue.forEach((data) => {
+      checkCredentials(data)
+})
+   useEffect(() => {
+    localStorage.getItem('Username') ? navigate('/'):<></>
+   })
 
 
   return (

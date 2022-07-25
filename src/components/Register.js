@@ -2,6 +2,8 @@ import React, {  useState } from 'react'
 import Header from './Header'
 import '../css/Register.css'
 import { useNavigate } from "react-router-dom";
+import swal from 'sweetalert';
+
 
 function Register() {
     const [formData,setFormData] = useState([])
@@ -19,6 +21,7 @@ function Register() {
 
     
     const handleSubmit = ((e) => {
+        
         if(formData.password !== formData.confpass){
             alert('Password did not match')
         }
@@ -28,8 +31,9 @@ function Register() {
             method:'POST',
             headers: {"Content-Type":"application/json"},
             body:JSON.stringify(formData)
-    })
-    .then(console.log('User Added'))
+})
+swal("Congratulations", "You are succesfully registered!", "success");
+    navigate('/login')
         }
     })
 

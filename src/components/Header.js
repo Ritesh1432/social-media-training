@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 import '../css/Header.css'
 
 function Header() {
+  const logoutFunc = () => {
+    localStorage.removeItem('Username')
+    // setLoginStatus(false)
+  }
   return (
     <>
      <div>
@@ -25,7 +29,11 @@ function Header() {
         <Link className="nav-link navItemClass" to='/settings'>Settings</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link navItemClass" to='/register'>Register/Login</Link>
+        <Link className="nav-link navItemClass" to='/register'>
+        {
+            localStorage.getItem('Username') ? <div onClick={logoutFunc}>Logout</div>:<div>Register/Login</div>
+        }
+        </Link>
       </li>
     </ul>
   </div>

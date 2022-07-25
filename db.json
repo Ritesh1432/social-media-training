@@ -1,26 +1,23 @@
 {
   "users": [
     {
-      "fname": "jbnc3f ",
-      "lname": " g",
-      "phoneNo": "r",
-      "emailid": "ddd@gmail.com",
-      "city": "4fg3g",
-      "uname": "f2f",
-      "password": "1234",
-      "confpass": "1234",
+      "fname": "Ritesh",
+      "lname": "Dewoolkar",
+      "emailid": "ritesh@gmail.com",
+      "phoneNo": "7893455322",
+      "uname": "Ritesh123",
+      "city": "Mumbai",
+      "password": "123456",
+      "confpass": "123456",
       "id": 1
-    },
+    }
+  ],
+  "posts":[
     {
-      "fname": "v3 rv",
-      "lname": "rv ",
-      "phoneNo": "m ",
-      "emailid": "m@gmail.com",
-      "uname": "m33",
-      "city": "34klgn34g",
-      "confpass": "1234",
-      "password": "1234",
-      "id": 2
+      "uname":"Ritesh123",
+      "postImage":"https://i.picsum.photos/id/167/536/354.jpg?hmac=BUgJVb5jqD-gb9b5tkNCkf8sfK57zWgB5J8_FY6Ytyo",
+      "postTitle":"This is a test post",
+      "postContent":"kjhgfcgvhbjbhghfgxcvb"
     }
   ]
 }
