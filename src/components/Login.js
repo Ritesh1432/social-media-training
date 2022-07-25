@@ -1,8 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './Header'
 import '../css/Login.css'
+import { useNavigate } from "react-router-dom";
+
 
 function Login() {
+  const [uname,setUname] = useState('')
+  const [password,setPassword] = useState('')
+  const [fetchedValue,setFetchedValue] = useState([])
+  let navigate = useNavigate(); 
+
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch('http://localhost:3000/users')
+    .then(res => res.json())
+    .then(data => setFetchedValue(data))
+    
+  }
+
+  const checkCredentials =  (data) => {
+    if(data.uname === uname)
+    if(data.password === password)
+    {
+    localStorage.setItem('Username',uname)
+    navigate('/')
+    }
+  }
+  fetchedValue && fetchedValue.map((data) => (
+    checkCredentials(data)
+  ))
+   
+
+
   return (
     <>
     <Header />
@@ -17,16 +47,16 @@ function Login() {
           <div className='loginImgClass'>
             <img src={require('../images/test.png')} alt="test" width='200' height='150'/>
           </div>
-        <form className='loginForm'>
+        <form className='loginForm' onSubmit={handleSubmit}>
           <div className='row'>
               <label className='text-white'>Username:</label>
-              <input type='text' className='form-control' />
+              <input type='text' className='form-control' onChange={(e) =>setUname(e.target.value)} name="uname" required/>
           </div>
           <div className='row'>
               <label className='text-white'>Password:</label>
-              <input type='password' className='form-control' />
+              <input type='password' className='form-control' onChange={(e) => setPassword(e.target.value)} name="password" required/>
           </div>
-          <button className='btn btn-primary loginButton' >Login</button>
+          <button className='btn btn-primary loginButton'>Login</button>
         </form>
       </div>
         </div>
